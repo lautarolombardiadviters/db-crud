@@ -7,13 +7,13 @@ import { CarBrand } from './entities/car_brand.entity';
 
 @Injectable()
 export class CarBrandsService {
-  constructor(@InjectRepository(CarBrand) private readonly cardBrandRepository: Repository<CarBrand>) {}
+  constructor(@InjectRepository(CarBrand) private readonly carBrandRepository: Repository<CarBrand>) {}
   create(createCarBrandDto: CreateCarBrandDto) {
-    return this.cardBrandRepository.save(createCarBrandDto);
+    return this.carBrandRepository.save(createCarBrandDto);
   }
 
   findAll() {
-    return this.cardBrandRepository.find();
+    return this.carBrandRepository.find();
   }
 
   findOne(id: number) {

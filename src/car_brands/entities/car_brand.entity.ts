@@ -7,6 +7,6 @@ export class CarBrand {
   id: number;
   @Column('text')
   name: string;
-  @OneToMany(() => CarModel, (carModel) => carModel.name)
+  @OneToMany(() => CarModel, (carModel) => carModel.brand)
   models: CarModel[];
 }

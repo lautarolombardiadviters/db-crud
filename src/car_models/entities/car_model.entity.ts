@@ -10,6 +10,6 @@ export class CarModel {
   name: string;
   @OneToMany(() => Car, (car) => car.model)
   cars: Car[];
-  @ManyToOne(() => CarBrand, (cardBrand) => cardBrand.name)
-  cardBrand: CarBrand;
+  @ManyToOne(() => CarBrand, (carBrand) => carBrand.models)
+  brand: CarBrand;
 }

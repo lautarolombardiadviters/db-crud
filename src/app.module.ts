@@ -13,6 +13,7 @@ import { ProgrammingLanguagesModule } from './programming_languages/programming_
 import { RolesModule } from './roles/roles.module';
 import { StatesModule } from './states/states.module';
 import { UsersModule } from './users/users.module';
+import { LoginModule } from './login/login.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { UsersModule } from './users/users.module';
     StatesModule,
     ColorsModule,
     CarModelsModule,
+    LoginModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -8,5 +8,5 @@ export class Color {
   @Column('text')
   name: string;
   @OneToMany(() => Car, (car) => car.color)
-  car: Car[];
+  cars: Car[];
 }

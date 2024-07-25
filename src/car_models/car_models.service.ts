@@ -13,7 +13,7 @@ export class CarModelsService {
   }
 
   findAll() {
-    return this.carModelRepository.find();
+    return this.carModelRepository.find({ relations: { brand: true } });
   }
 
   findOne(id: number) {

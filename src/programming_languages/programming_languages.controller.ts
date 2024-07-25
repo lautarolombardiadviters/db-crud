@@ -1,8 +1,10 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { ProgrammingLanguagesService } from './programming_languages.service';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { CreateProgrammingLanguageDto } from './dto/create-programming_language.dto';
 import { UpdateProgrammingLanguageDto } from './dto/update-programming_language.dto';
+import { ProgrammingLanguagesService } from './programming_languages.service';
 
+@ApiTags('programming-languages')
 @Controller('programming-languages')
 export class ProgrammingLanguagesController {
   constructor(private readonly programmingLanguagesService: ProgrammingLanguagesService) {}

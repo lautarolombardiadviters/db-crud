@@ -13,7 +13,7 @@ export class UsersService {
   }
 
   findAll() {
-    return this.userRepository.find();
+    return this.userRepository.find({ relations: { cars: { model: true, color: true } } });
   }
 
   findOne(id: number) {
